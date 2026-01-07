@@ -1,4 +1,4 @@
-final Map<String, double> moneyFelow = {
+final Map<String, double> exchangeRatesToUSD = {
   'EGP': 48.44,
   'SAR': 3.75,
   'AED': 3.67,
