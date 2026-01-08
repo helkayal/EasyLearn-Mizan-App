@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:mizan_app/core/utils/hive_constants.dart';
 import 'package:mizan_app/features/register/screens/register_screen.dart';
+import 'package:mizan_app/features/home/screens/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -37,9 +40,16 @@ class _SplashScreenState extends State<SplashScreen>
 
     Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;
+
+      final box = Hive.box(HiveConstants.userBox);
+      final isLoggedIn = box.get('is_logged_in') == true;
+
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const RegisterScreen()),
+        MaterialPageRoute(
+          builder: (_) =>
+              isLoggedIn ? const HomeScreen() : const RegisterScreen(),
+        ),
       );
     });
   }

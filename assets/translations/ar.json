@@ -1,8 +1,20 @@
 {
-  "app_title": "ميزان",
-  "from": "من",
-  "to": "إلى",
-  "amount": "المبلغ",
-  "convert": "تحويل",
-  "result": "النتيجة"
+  "app_name": "ميزان",
+
+  "name": "الاسم",
+  "email": "الإيميل",
+  "monthly_salary": "الراتب الشهري",
+  "bank_balance": "الرصيد البنكي",
+
+  "required_field": "هذا الحقل مطلوب",
+  "must_be_number": "هذا الحقل يجب أن يكون رقمًا",
+  "invalid_email": "عنوان إيميل غير صالح",
+
+  "choose_country": "اختر بلدك",
+
+  "register": "تسجيل",
+  "data_saved_successfully": "تم حفظ بيانات المستخدم بنجاح!",
+
+  "show": "إظهار",
+  "hide": "إخفاء"
 }

@@ -1,8 +1,20 @@
 {
-  "app_title": "Mizan",
-  "from": "From",
-  "to": "To",
-  "amount": "Amount",
-  "convert": "Convert",
-  "result": "Result"
+  "app_name": "Mizan",
+
+  "name": "Name",
+  "email": "Email",
+  "monthly_salary": "Monthly Salary",
+  "bank_balance": "Bank Balance",
+
+  "required_field": "This field is required",
+  "must_be_number": "This field must be a number",
+  "invalid_email": "Invalid email address",
+
+  "choose_country": "Choose your country",
+
+  "register": "Register",
+  "data_saved_successfully": "User data saved successfully!",
+
+  "show": "Show",
+  "hide": "Hide"
 }

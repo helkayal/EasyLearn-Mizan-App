@@ -3,11 +3,18 @@
 // ignore_for_file: constant_identifier_names
 
 abstract class  LocaleKeys {
-  static const app_title = 'app_title';
-  static const from = 'from';
-  static const to = 'to';
-  static const amount = 'amount';
-  static const convert = 'convert';
-  static const result = 'result';
+  static const app_name = 'app_name';
+  static const name = 'name';
+  static const email = 'email';
+  static const monthly_salary = 'monthly_salary';
+  static const bank_balance = 'bank_balance';
+  static const required_field = 'required_field';
+  static const must_be_number = 'must_be_number';
+  static const invalid_email = 'invalid_email';
+  static const choose_country = 'choose_country';
+  static const register = 'register';
+  static const data_saved_successfully = 'data_saved_successfully';
+  static const show = 'show';
+  static const hide = 'hide';
 
 }

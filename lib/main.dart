@@ -1,9 +1,20 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:mizan_app/core/utils/hive_constants.dart';
 import 'package:mizan_app/mizan_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Hive
+  await Hive.initFlutter();
+
+  // Open Hive boxes
+  await Hive.openBox(HiveConstants.userBox);
+  // await Hive.openBox(HiveConstants.settingsBox);
+  // await Hive.openBox(HiveConstants.cacheBox);
+
   await EasyLocalization.ensureInitialized();
 
   runApp(
