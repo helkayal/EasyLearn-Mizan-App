@@ -59,7 +59,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 16),
 
                   MizanTextField(
-                    label: LocaleKeys.name.tr(),
+                    label: LocaleKeys.register_name.tr(),
                     controller: _nameController,
                     validator: _controller.requiredValidator,
                   ),
@@ -67,7 +67,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 12),
 
                   MizanTextField(
-                    label: LocaleKeys.email.tr(),
+                    label: LocaleKeys.register_email.tr(),
                     controller: _emailController,
                     keyboardType: TextInputType.emailAddress,
                     validator: _controller.emailValidator,
@@ -76,7 +76,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 12),
 
                   MizanTextField(
-                    label: LocaleKeys.monthly_salary.tr(),
+                    label: LocaleKeys.register_monthly_salary.tr(),
                     controller: _salaryController,
                     keyboardType: TextInputType.number,
                     obscureText: true,
@@ -86,7 +86,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 12),
 
                   MizanTextField(
-                    label: LocaleKeys.bank_balance.tr(),
+                    label: LocaleKeys.register_bank_balance.tr(),
                     controller: _balanceController,
                     keyboardType: TextInputType.number,
                     obscureText: true,
@@ -96,10 +96,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 12),
 
                   MizanPickerFormField(
-                    label: LocaleKeys.choose_country.tr(),
+                    label: LocaleKeys.register_choose_country.tr(),
                     value: selectedCountry,
                     validator: (value) => value == null || value.isEmpty
-                        ? LocaleKeys.required_field.tr()
+                        ? LocaleKeys.register_required_field.tr()
                         : null,
                     onChanged: (country) {
                       setState(() => selectedCountry = country);
@@ -138,7 +138,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       messenger.showSnackBar(
                         SnackBar(
                           content: Text(
-                            LocaleKeys.data_saved_successfully.tr(),
+                            LocaleKeys.register_data_saved_successfully.tr(),
                           ),
                         ),
                       );

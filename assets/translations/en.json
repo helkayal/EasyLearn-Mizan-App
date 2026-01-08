@@ -1,30 +1,42 @@
 {
   "app_name": "Mizan",
 
-  "name": "Name",
-  "email": "Email",
-  "monthly_salary": "Monthly Salary",
-  "bank_balance": "Bank Balance",
+  "register": {
+    "name": "Name",
+    "email": "Email",
+    "monthly_salary": "Monthly Salary",
+    "bank_balance": "Bank Balance",
 
-  "required_field": "This field is required",
-  "must_be_number": "This field must be a number",
-  "invalid_email": "Invalid email address",
+    "required_field": "This field is required",
+    "must_be_number": "This field must be a number",
+    "invalid_email": "Invalid email address",
 
-  "choose_country": "Choose your country",
+    "choose_country": "Choose your country",
 
-  "register": "Register",
-  "data_saved_successfully": "User data saved successfully!",
+    "button_text": "Register",
+    "data_saved_successfully": "User data saved successfully!",
 
-  "show": "Show",
-  "hide": "Hide",
+    "show": "Show",
+    "hide": "Hide"
+  },
 
-  "welcome_message": "Welcome to Mizan, {name}",
+  "home": {
+    "welcome_message": "Welcome to Mizan, {name}",
 
-  "currency_to_usd": "Currency conversion to USD",
+    "currency_to_usd": "Currency conversion to USD",
 
-  "installments_title": "View installments and due dates",
+    "installments_title": "View installments and due dates",
 
-  "expenses_organizer": "Organize expenses based on your monthly income",
+    "expenses_organizer": "Organize expenses based on your monthly income",
 
-  "personal_data": "Personal information"
+    "personal_data": "Personal information"
+  },
+
+  "currency": {
+    "description": "In this section, you can convert currencies to their dollar value",
+    "select_currency": "Select the currency to convert",
+    "enter_amount": "Enter amount",
+    "convert": "Convert",
+    "result_format": "{country} ({code}) ({amount}) = {result} {target}"
+  }
 }

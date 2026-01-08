@@ -44,7 +44,7 @@ class WelcomeView extends StatelessWidget {
                     ),
             ),
             child: Text(
-              LocaleKeys.welcome_message.tr(namedArgs: {'name': name}),
+              LocaleKeys.home_welcome_message.tr(namedArgs: {'name': name}),
               style: AppTextStyles.black16SemiBold,
             ),
           ),

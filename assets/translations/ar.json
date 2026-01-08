@@ -1,30 +1,42 @@
 {
   "app_name": "ميزان",
 
-  "name": "الاسم",
-  "email": "الإيميل",
-  "monthly_salary": "الراتب الشهري",
-  "bank_balance": "الرصيد البنكي",
+  "register": {
+    "name": "الاسم",
+    "email": "الإيميل",
+    "monthly_salary": "الراتب الشهري",
+    "bank_balance": "الرصيد البنكي",
 
-  "required_field": "هذا الحقل مطلوب",
-  "must_be_number": "هذا الحقل يجب أن يكون رقمًا",
-  "invalid_email": "عنوان إيميل غير صالح",
+    "required_field": "هذا الحقل مطلوب",
+    "must_be_number": "هذا الحقل يجب أن يكون رقمًا",
+    "invalid_email": "عنوان إيميل غير صالح",
 
-  "choose_country": "اختر بلدك",
+    "choose_country": "اختر بلدك",
 
-  "register": "تسجيل",
-  "data_saved_successfully": "تم حفظ بيانات المستخدم بنجاح!",
+    "button_text": "تسجيل",
+    "data_saved_successfully": "تم حفظ بيانات المستخدم بنجاح!",
 
-  "show": "إظهار",
-  "hide": "إخفاء",
+    "show": "إظهار",
+    "hide": "إخفاء"
+  },
 
-  "welcome_message": "أهلاً بك في الميزان يا {name}",
+  "home": {
+    "welcome_message": "أهلاً بك في الميزان يا {name}",
 
-  "currency_to_usd": "حساب تحويل العملات إلى الدولار",
+    "currency_to_usd": "حساب تحويل العملات إلى الدولار",
 
-  "installments_title": "عرض الأقساط ومواعيدها",
+    "installments_title": "عرض الأقساط ومواعيدها",
 
-  "expenses_organizer": "تنظيم المصروفات بالنسبة لدخلك الشهري",
+    "expenses_organizer": "تنظيم المصروفات بالنسبة لدخلك الشهري",
 
-  "personal_data": "البيانات الشخصية"
+    "personal_data": "البيانات الشخصية"
+  },
+
+  "currency": {
+    "description": "في هذه الغرفة يمكنك تحويل العملات إلى قيمتها الدولارية",
+    "select_currency": "اختر العملة المراد تحويلها",
+    "enter_amount": "أدخل المبلغ",
+    "convert": "تحويل",
+    "result_format": "{country} ({code}) ({amount}) = {result} {target}"
+  }
 }

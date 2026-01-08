@@ -6,22 +6,32 @@ import 'package:mizan_app/generated/locale_keys.g.dart';
 
 class RegisterController {
   String? requiredValidator(String? value) {
-    if (value == null || value.isEmpty) return LocaleKeys.required_field.tr();
+    if (value == null || value.isEmpty) {
+      return LocaleKeys.register_required_field.tr();
+    }
     return null;
   }
 
   String? emailValidator(String? value) {
-    if (value == null || value.isEmpty) return LocaleKeys.required_field.tr();
+    if (value == null || value.isEmpty) {
+      return LocaleKeys.register_required_field.tr();
+    }
     final email = value.trim();
     final emailRegex = RegExp(r'^[\w\-.]+@([\w\-]+\.)+[\w\-]{2,}$');
-    if (!emailRegex.hasMatch(email)) return LocaleKeys.invalid_email.tr();
+    if (!emailRegex.hasMatch(email)) {
+      return LocaleKeys.register_invalid_email.tr();
+    }
     return null;
   }
 
   String? numericValidator(String? value) {
-    if (value == null || value.isEmpty) return LocaleKeys.required_field.tr();
+    if (value == null || value.isEmpty) {
+      return LocaleKeys.register_required_field.tr();
+    }
     final text = value.replaceAll(',', '').trim();
-    if (num.tryParse(text) == null) return LocaleKeys.must_be_number.tr();
+    if (num.tryParse(text) == null) {
+      return LocaleKeys.register_must_be_number.tr();
+    }
     return null;
   }
 
