@@ -41,6 +41,7 @@ class RegisterController {
     );
 
     final box = Hive.box(HiveConstants.userBox);
-    await box.put('user', user.toMap());
+    await box.put(HiveConstants.user, user.toMap());
+    await box.put(HiveConstants.isLoggedin, true);
   }
 }

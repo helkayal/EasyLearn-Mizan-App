@@ -16,5 +16,15 @@
   "data_saved_successfully": "User data saved successfully!",
 
   "show": "Show",
-  "hide": "Hide"
+  "hide": "Hide",
+
+  "welcome_message": "Welcome to Mizan, {name}",
+
+  "currency_to_usd": "Currency conversion to USD",
+
+  "installments_title": "View installments and due dates",
+
+  "expenses_organizer": "Organize expenses based on your monthly income",
+
+  "personal_data": "Personal information"
 }

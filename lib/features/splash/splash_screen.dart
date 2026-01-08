@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen>
       if (!mounted) return;
 
       final box = Hive.box(HiveConstants.userBox);
-      final isLoggedIn = box.get('is_logged_in') == true;
+      final isLoggedIn = box.get(HiveConstants.isLoggedin) == true;
 
       Navigator.pushReplacement(
         context,

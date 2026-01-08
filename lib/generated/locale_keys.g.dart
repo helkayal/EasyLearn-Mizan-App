@@ -16,5 +16,10 @@ abstract class  LocaleKeys {
   static const data_saved_successfully = 'data_saved_successfully';
   static const show = 'show';
   static const hide = 'hide';
+  static const welcome_message = 'welcome_message';
+  static const currency_to_usd = 'currency_to_usd';
+  static const installments_title = 'installments_title';
+  static const expenses_organizer = 'expenses_organizer';
+  static const personal_data = 'personal_data';
 
 }

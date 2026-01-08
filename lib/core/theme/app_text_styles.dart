@@ -22,5 +22,11 @@ class AppTextStyles {
     color: AppColors.blackColor,
   );
 
+  static const TextStyle lightYellow20SemiBold = TextStyle(
+    color: AppColors.lightYellowColor,
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+  );
+
   static const bold18 = TextStyle(fontSize: 18, fontWeight: FontWeight.bold);
 }

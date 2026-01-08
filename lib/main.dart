@@ -22,7 +22,7 @@ void main() async {
       supportedLocales: [Locale('en'), Locale('ar')],
       path: 'assets/translations',
       fallbackLocale: Locale('ar'),
-      startLocale: Locale('en'),
+      startLocale: Locale('ar'),
       child: MizanApp(),
     ),
   );

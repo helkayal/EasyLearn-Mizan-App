@@ -16,5 +16,15 @@
   "data_saved_successfully": "تم حفظ بيانات المستخدم بنجاح!",
 
   "show": "إظهار",
-  "hide": "إخفاء"
+  "hide": "إخفاء",
+
+  "welcome_message": "أهلاً بك في الميزان يا {name}",
+
+  "currency_to_usd": "حساب تحويل العملات إلى الدولار",
+
+  "installments_title": "عرض الأقساط ومواعيدها",
+
+  "expenses_organizer": "تنظيم المصروفات بالنسبة لدخلك الشهري",
+
+  "personal_data": "البيانات الشخصية"
 }
