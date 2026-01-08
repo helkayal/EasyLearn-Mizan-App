@@ -19,8 +19,12 @@ class AppTheme {
 
     textTheme: const TextTheme(
       headlineLarge: AppTextStyles.black28Bold,
+      headlineMedium: AppTextStyles.black18Bold,
+      headlineSmall: AppTextStyles.black16SemiBold,
+
       bodyMedium: AppTextStyles.grey16Regular,
-      labelLarge: AppTextStyles.black16SemiBold,
+
+      labelMedium: AppTextStyles.lightYellow20SemiBold,
     ),
 
     inputDecorationTheme: InputDecorationTheme(
@@ -55,7 +59,7 @@ class AppTheme {
         foregroundColor: AppColors.blackColor,
         minimumSize: const Size(double.infinity, 52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-        textStyle: AppTextStyles.bold18,
+        textStyle: AppTextStyles.black18Bold,
       ),
     ),
   );

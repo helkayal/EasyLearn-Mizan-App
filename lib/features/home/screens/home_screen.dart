@@ -31,7 +31,21 @@ class HomeScreen extends StatelessWidget {
             HomeActionCard(
               title: LocaleKeys.home_installments_title.tr(),
               icon: Image.asset("assets/images/icInstallement.png"),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => Scaffold(
+                      appBar: AppBar(
+                        title: Text(LocaleKeys.home_installments_title.tr()),
+                      ),
+                      body: Center(
+                        child: Text(LocaleKeys.home_installments_title.tr()),
+                      ),
+                    ),
+                  ),
+                );
+              },
             ),
 
             const SizedBox(height: 16),

@@ -2,7 +2,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:mizan_app/core/theme/app_colors.dart';
-import 'package:mizan_app/core/theme/app_text_styles.dart';
 import 'package:mizan_app/core/utils/hive_constants.dart';
 import 'package:mizan_app/generated/locale_keys.g.dart';
 
@@ -45,7 +44,7 @@ class WelcomeView extends StatelessWidget {
             ),
             child: Text(
               LocaleKeys.home_welcome_message.tr(namedArgs: {'name': name}),
-              style: AppTextStyles.black16SemiBold,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
         ),

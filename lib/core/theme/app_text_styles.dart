@@ -10,10 +10,10 @@ class AppTextStyles {
     color: AppColors.blackColor,
   );
 
-  static const TextStyle grey16Regular = TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeight.w400,
-    color: AppColors.greyColor,
+  static const black18Bold = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: AppColors.blackColor,
   );
 
   static const TextStyle black16SemiBold = TextStyle(
@@ -22,11 +22,15 @@ class AppTextStyles {
     color: AppColors.blackColor,
   );
 
+  static const TextStyle grey16Regular = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    color: AppColors.greyColor,
+  );
+
   static const TextStyle lightYellow20SemiBold = TextStyle(
     color: AppColors.lightYellowColor,
     fontSize: 20,
     fontWeight: FontWeight.w600,
   );
-
-  static const bold18 = TextStyle(fontSize: 18, fontWeight: FontWeight.bold);
 }
