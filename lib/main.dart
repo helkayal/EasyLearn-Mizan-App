@@ -8,10 +8,10 @@ void main() async {
 
   runApp(
     EasyLocalization(
-      supportedLocales: [Locale('en', 'US'), Locale('ar', 'AR')],
+      supportedLocales: [Locale('en'), Locale('ar')],
       path: 'assets/translations',
-      fallbackLocale: Locale('ar', 'AR'),
-      startLocale: Locale('ar', 'AR'),
+      fallbackLocale: Locale('ar'),
+      startLocale: Locale('en'),
       child: MizanApp(),
     ),
   );
