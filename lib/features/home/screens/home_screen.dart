@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:mizan_app/features/home/views/welcomw_view.dart';
+import 'package:mizan_app/features/home/views/welcome_view.dart';
 import 'package:mizan_app/features/home/widgets/home_action_card.dart';
 import 'package:mizan_app/generated/locale_keys.g.dart';
 
@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 20),
 
             HomeActionCard(
-              title: LocaleKeys.currency_to_usd.tr(),
+              title: LocaleKeys.home_currency_to_usd.tr(),
               icon: Image.asset("assets/images/icCurrency.png"),
               onTap: () {},
             ),
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 16),
 
             HomeActionCard(
-              title: LocaleKeys.installments_title.tr(),
+              title: LocaleKeys.home_installments_title.tr(),
               icon: Image.asset("assets/images/icInstallement.png"),
               onTap: () {},
             ),
@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 16),
 
             HomeActionCard(
-              title: LocaleKeys.expenses_organizer.tr(),
+              title: LocaleKeys.home_expenses_organizer.tr(),
               icon: Image.asset("assets/images/icExpenses.png"),
               onTap: () {},
             ),
@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 16),
 
             HomeActionCard(
-              title: LocaleKeys.personal_data.tr(),
+              title: LocaleKeys.home_personal_data.tr(),
               icon: Image.asset("assets/images/icPersonal.png"),
               onTap: () {},
             ),
