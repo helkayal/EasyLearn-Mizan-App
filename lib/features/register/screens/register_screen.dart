@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mizan_app/features/home/screens/home_screen.dart';
 import 'package:mizan_app/features/register/controllers/register_controller.dart';
 import 'package:mizan_app/generated/locale_keys.g.dart';
+import 'package:mizan_app/core/widgets/mizan_button.dart';
 import 'package:mizan_app/features/register/widgets/mizan_picker_field.dart';
 import 'package:mizan_app/core/widgets/mizan_text_field.dart';
 
@@ -108,7 +109,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                   const SizedBox(height: 20),
 
-                  ElevatedButton(
+                  MizanButton(
+                    text: LocaleKeys.register.tr(),
                     onPressed: () async {
                       if (!_formKey.currentState!.validate()) return;
 
@@ -148,7 +150,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         MaterialPageRoute(builder: (_) => const HomeScreen()),
                       );
                     },
-                    child: Text(LocaleKeys.register.tr()),
                   ),
                 ],
               ),

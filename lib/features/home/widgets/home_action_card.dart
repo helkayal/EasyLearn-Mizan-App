@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mizan_app/core/theme/app_colors.dart';
-import 'package:mizan_app/core/theme/app_text_styles.dart';
 
 class HomeActionCard extends StatelessWidget {
   final String title;
@@ -29,7 +28,10 @@ class HomeActionCard extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
-              child: Text(title, style: AppTextStyles.lightYellow20SemiBold),
+              child: Text(
+                title,
+                style: Theme.of(context).textTheme.labelMedium,
+              ),
             ),
             CircleAvatar(
               radius: 40,

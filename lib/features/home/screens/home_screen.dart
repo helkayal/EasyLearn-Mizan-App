@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:mizan_app/features/home/views/welcome_view.dart';
+import 'package:hive/hive.dart';
+import 'package:mizan_app/core/utils/hive_constants.dart';
+import 'package:mizan_app/features/currency/screens/currency_screen.dart';
+import 'package:mizan_app/core/widgets/welcome_view.dart';
 import 'package:mizan_app/features/home/widgets/home_action_card.dart';
 import 'package:mizan_app/generated/locale_keys.g.dart';
 
@@ -9,6 +12,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final userBox = Hive.box(HiveConstants.userBox);
+    final userMap = userBox.get(HiveConstants.user);
+    final name = (userMap is Map) ? (userMap['name'] ?? '') : '';
+    final greetingMessage = LocaleKeys.home_welcome_message.tr(
+      namedArgs: {'name': name},
+    );
+
     return Scaffold(
       appBar: AppBar(title: Text(LocaleKeys.app_name.tr())),
       body: Padding(
@@ -16,14 +26,19 @@ class HomeScreen extends StatelessWidget {
         child: ListView(
           children: [
             /// Welcome Card
-            WelcomeView(),
+            WelcomeView(greetingMessage: greetingMessage),
 
             const SizedBox(height: 20),
 
             HomeActionCard(
               title: LocaleKeys.home_currency_to_usd.tr(),
               icon: Image.asset("assets/images/icCurrency.png"),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const CurrencyScreen()),
+                );
+              },
             ),
 
             const SizedBox(height: 16),
@@ -31,21 +46,7 @@ class HomeScreen extends StatelessWidget {
             HomeActionCard(
               title: LocaleKeys.home_installments_title.tr(),
               icon: Image.asset("assets/images/icInstallement.png"),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => Scaffold(
-                      appBar: AppBar(
-                        title: Text(LocaleKeys.home_installments_title.tr()),
-                      ),
-                      body: Center(
-                        child: Text(LocaleKeys.home_installments_title.tr()),
-                      ),
-                    ),
-                  ),
-                );
-              },
+              onTap: () {},
             ),
 
             const SizedBox(height: 16),

@@ -27,6 +27,7 @@ abstract class  LocaleKeys {
   static const currency_select_currency = 'currency.select_currency';
   static const currency_enter_amount = 'currency.enter_amount';
   static const currency_convert = 'currency.convert';
+  static const currency_usd = 'currency.usd';
   static const currency_result_format = 'currency.result_format';
   static const currency = 'currency';
 

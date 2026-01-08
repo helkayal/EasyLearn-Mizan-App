@@ -19,10 +19,10 @@ class AppTheme {
 
     textTheme: const TextTheme(
       headlineLarge: AppTextStyles.black28Bold,
-      headlineMedium: AppTextStyles.black18Bold,
+      headlineMedium: AppTextStyles.black20Bold,
       headlineSmall: AppTextStyles.black16SemiBold,
 
-      bodyMedium: AppTextStyles.grey16Regular,
+      bodyMedium: AppTextStyles.grey18Regular,
 
       labelMedium: AppTextStyles.lightYellow20SemiBold,
     ),
@@ -59,7 +59,7 @@ class AppTheme {
         foregroundColor: AppColors.blackColor,
         minimumSize: const Size(double.infinity, 52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-        textStyle: AppTextStyles.black18Bold,
+        textStyle: AppTextStyles.black20Bold,
       ),
     ),
   );

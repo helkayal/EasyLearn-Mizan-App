@@ -37,6 +37,7 @@
     "select_currency": "اختر العملة المراد تحويلها",
     "enter_amount": "أدخل المبلغ",
     "convert": "تحويل",
-    "result_format": "{country} ({code}) ({amount}) = {result} {target}"
+    "usd": "دولار أمريكي",
+    "result_format": "{amount} {code} = {result} {target}"
   }
 }

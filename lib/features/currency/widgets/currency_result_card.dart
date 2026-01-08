@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:mizan_app/core/theme/app_colors.dart';
-import 'package:mizan_app/generated/locale_keys.g.dart';
 
 class CurrencyResultCard extends StatelessWidget {
   final String country;
@@ -28,18 +26,25 @@ class CurrencyResultCard extends StatelessWidget {
         color: AppColors.lightGreenColor,
         borderRadius: BorderRadius.circular(16),
       ),
-      child: Text(
-        LocaleKeys.currency_result_format.tr(
-          namedArgs: {
-            'country': country,
-            'code': code,
-            'amount': amount,
-            'result': result,
-            'target': target,
-          },
-        ),
-        textAlign: TextAlign.center,
-        style: Theme.of(context).textTheme.bodyLarge,
+      child: Column(
+        spacing: 5,
+        children: [
+          Text(
+            "$amount $code ",
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+          Icon(
+            Icons.assignment_returned_outlined,
+            size: 32,
+            color: AppColors.greyColor,
+          ),
+          Text(
+            "$result $target",
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+        ],
       ),
     );
   }

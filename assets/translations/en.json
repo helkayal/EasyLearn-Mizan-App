@@ -37,6 +37,7 @@
     "select_currency": "Select the currency to convert",
     "enter_amount": "Enter amount",
     "convert": "Convert",
-    "result_format": "{country} ({code}) ({amount}) = {result} {target}"
+    "usd": "USD",
+    "result_format": "{amount} {code} = {result} {target}"
   }
 }

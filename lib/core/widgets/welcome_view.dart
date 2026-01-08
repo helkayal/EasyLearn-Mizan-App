@@ -1,24 +1,19 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:mizan_app/core/theme/app_colors.dart';
-import 'package:mizan_app/core/utils/hive_constants.dart';
-import 'package:mizan_app/generated/locale_keys.g.dart';
 
 class WelcomeView extends StatelessWidget {
-  const WelcomeView({super.key});
+  const WelcomeView({super.key, required this.greetingMessage});
+
+  final String greetingMessage;
 
   @override
   Widget build(BuildContext context) {
-    final userBox = Hive.box(HiveConstants.userBox);
-    final userMap = userBox.get(HiveConstants.user);
-    final name = (userMap is Map) ? (userMap['name'] ?? '') : '';
-
     final lang = context.locale.languageCode;
 
     return Row(
       spacing: 10,
-      crossAxisAlignment: CrossAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CircleAvatar(
           radius: 40,
@@ -27,24 +22,25 @@ class WelcomeView extends StatelessWidget {
         ),
         Expanded(
           child: Container(
+            margin: const EdgeInsets.only(top: 20),
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: AppColors.lightGreenColor,
               borderRadius: lang == 'en'
                   ? const BorderRadius.only(
-                      topRight: Radius.circular(5),
-                      bottomRight: Radius.circular(5),
+                      topRight: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
                       bottomLeft: Radius.circular(20),
                     )
                   : const BorderRadius.only(
-                      topLeft: Radius.circular(5),
-                      bottomLeft: Radius.circular(5),
+                      topLeft: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
                       bottomRight: Radius.circular(20),
                     ),
             ),
             child: Text(
-              LocaleKeys.home_welcome_message.tr(namedArgs: {'name': name}),
-              style: Theme.of(context).textTheme.headlineSmall,
+              greetingMessage,
+              style: Theme.of(context).textTheme.headlineLarge,
             ),
           ),
         ),
