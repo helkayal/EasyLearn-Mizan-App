@@ -15,6 +15,8 @@ class WelcomeView extends StatelessWidget {
     final userMap = userBox.get(HiveConstants.user);
     final name = (userMap is Map) ? (userMap['name'] ?? '') : '';
 
+    final lang = context.locale.languageCode;
+
     return Row(
       spacing: 10,
       crossAxisAlignment: CrossAxisAlignment.end,
@@ -29,11 +31,17 @@ class WelcomeView extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: AppColors.lightGreenColor,
-              borderRadius: BorderRadius.only(
-                topRight: Radius.circular(5),
-                bottomRight: Radius.circular(5),
-                bottomLeft: Radius.circular(20),
-              ),
+              borderRadius: lang == 'en'
+                  ? const BorderRadius.only(
+                      topRight: Radius.circular(5),
+                      bottomRight: Radius.circular(5),
+                      bottomLeft: Radius.circular(20),
+                    )
+                  : const BorderRadius.only(
+                      topLeft: Radius.circular(5),
+                      bottomLeft: Radius.circular(5),
+                      bottomRight: Radius.circular(20),
+                    ),
             ),
             child: Text(
               LocaleKeys.welcome_message.tr(namedArgs: {'name': name}),
