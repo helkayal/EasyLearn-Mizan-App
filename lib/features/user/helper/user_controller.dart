@@ -1,36 +1,36 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:mizan_app/core/utils/hive_constants.dart';
-import 'package:mizan_app/features/register/model/user_dm.dart';
+import 'package:mizan_app/features/user/model/user_dm.dart';
 import 'package:mizan_app/generated/locale_keys.g.dart';
 
-class RegisterController {
+class UserHelper {
   String? requiredValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return LocaleKeys.register_required_field.tr();
+      return LocaleKeys.personal_data_required_field.tr();
     }
     return null;
   }
 
   String? emailValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return LocaleKeys.register_required_field.tr();
+      return LocaleKeys.personal_data_required_field.tr();
     }
     final email = value.trim();
     final emailRegex = RegExp(r'^[\w\-.]+@([\w\-]+\.)+[\w\-]{2,}$');
     if (!emailRegex.hasMatch(email)) {
-      return LocaleKeys.register_invalid_email.tr();
+      return LocaleKeys.personal_data_invalid_email.tr();
     }
     return null;
   }
 
   String? numericValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return LocaleKeys.register_required_field.tr();
+      return LocaleKeys.personal_data_required_field.tr();
     }
     final text = value.replaceAll(',', '').trim();
     if (num.tryParse(text) == null) {
-      return LocaleKeys.register_must_be_number.tr();
+      return LocaleKeys.personal_data_must_be_number.tr();
     }
     return null;
   }

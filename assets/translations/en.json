@@ -1,7 +1,7 @@
 {
   "app_name": "Mizan",
 
-  "register": {
+  "personal_data": {
     "name": "Name",
     "email": "Email",
     "monthly_salary": "Monthly Salary",
@@ -16,8 +16,10 @@
     "button_text": "Register",
     "data_saved_successfully": "User data saved successfully!",
 
-    "show": "Show",
-    "hide": "Hide"
+    "logout": "Logout",
+    "edit": "Edit",
+    "save": "Save",
+    "updated_successfully": "Profile updated successfully"
   },
 
   "home": {

@@ -4,19 +4,21 @@
 
 abstract class  LocaleKeys {
   static const app_name = 'app_name';
-  static const register_name = 'register.name';
-  static const register_email = 'register.email';
-  static const register_monthly_salary = 'register.monthly_salary';
-  static const register_bank_balance = 'register.bank_balance';
-  static const register_required_field = 'register.required_field';
-  static const register_must_be_number = 'register.must_be_number';
-  static const register_invalid_email = 'register.invalid_email';
-  static const register_choose_country = 'register.choose_country';
-  static const register_button_text = 'register.button_text';
-  static const register_data_saved_successfully = 'register.data_saved_successfully';
-  static const register_show = 'register.show';
-  static const register_hide = 'register.hide';
-  static const register = 'register';
+  static const personal_data_name = 'personal_data.name';
+  static const personal_data_email = 'personal_data.email';
+  static const personal_data_monthly_salary = 'personal_data.monthly_salary';
+  static const personal_data_bank_balance = 'personal_data.bank_balance';
+  static const personal_data_required_field = 'personal_data.required_field';
+  static const personal_data_must_be_number = 'personal_data.must_be_number';
+  static const personal_data_invalid_email = 'personal_data.invalid_email';
+  static const personal_data_choose_country = 'personal_data.choose_country';
+  static const personal_data_button_text = 'personal_data.button_text';
+  static const personal_data_data_saved_successfully = 'personal_data.data_saved_successfully';
+  static const personal_data_logout = 'personal_data.logout';
+  static const personal_data_edit = 'personal_data.edit';
+  static const personal_data_save = 'personal_data.save';
+  static const personal_data_updated_successfully = 'personal_data.updated_successfully';
+  static const personal_data = 'personal_data';
   static const home_welcome_message = 'home.welcome_message';
   static const home_currency_to_usd = 'home.currency_to_usd';
   static const home_installments_title = 'home.installments_title';

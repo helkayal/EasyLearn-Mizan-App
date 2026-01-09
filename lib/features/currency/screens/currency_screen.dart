@@ -5,7 +5,7 @@ import 'package:mizan_app/core/data/curreny_conversion.dart';
 import 'package:mizan_app/core/widgets/mizan_button.dart';
 import 'package:mizan_app/core/widgets/mizan_text_field.dart';
 import 'package:mizan_app/core/widgets/welcome_view.dart';
-import 'package:mizan_app/features/register/controllers/register_controller.dart';
+import 'package:mizan_app/features/user/helper/user_controller.dart';
 import 'package:mizan_app/generated/locale_keys.g.dart';
 import '../widgets/currency_result_card.dart';
 import '../widgets/currency_dropdown.dart';
@@ -71,7 +71,7 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
               label: LocaleKeys.currency_enter_amount.tr(),
               controller: _amountController,
               keyboardType: TextInputType.number,
-              validator: RegisterController().numericValidator,
+              validator: UserHelper().numericValidator,
             ),
 
             const SizedBox(height: 15),

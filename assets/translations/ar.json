@@ -1,7 +1,7 @@
 {
   "app_name": "ميزان",
 
-  "register": {
+  "personal_data": {
     "name": "الاسم",
     "email": "الإيميل",
     "monthly_salary": "الراتب الشهري",
@@ -16,8 +16,10 @@
     "button_text": "تسجيل",
     "data_saved_successfully": "تم حفظ بيانات المستخدم بنجاح!",
 
-    "show": "إظهار",
-    "hide": "إخفاء"
+    "logout": "تسجيل خروج",
+    "edit": "تعديل",
+    "save": "حفظ",
+    "updated_successfully": "تم تحديث الملف الشخصي بنجاح"
   },
 
   "home": {

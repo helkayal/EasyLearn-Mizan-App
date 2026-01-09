@@ -1,10 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:mizan_app/features/home/screens/home_screen.dart';
-import 'package:mizan_app/features/register/controllers/register_controller.dart';
+import 'package:mizan_app/features/user/helper/user_controller.dart';
 import 'package:mizan_app/generated/locale_keys.g.dart';
 import 'package:mizan_app/core/widgets/mizan_button.dart';
-import 'package:mizan_app/features/register/widgets/mizan_picker_field.dart';
+import 'package:mizan_app/features/user/widgets/mizan_picker_field.dart';
 import 'package:mizan_app/core/widgets/mizan_text_field.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -22,7 +22,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _salaryController = TextEditingController();
   final _balanceController = TextEditingController();
 
-  final _controller = RegisterController();
+  final _controller = UserHelper();
 
   String? selectedCountry;
 
@@ -60,7 +60,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 16),
 
                   MizanTextField(
-                    label: LocaleKeys.register_name.tr(),
+                    label: LocaleKeys.personal_data_name.tr(),
                     controller: _nameController,
                     validator: _controller.requiredValidator,
                   ),
@@ -68,7 +68,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 12),
 
                   MizanTextField(
-                    label: LocaleKeys.register_email.tr(),
+                    label: LocaleKeys.personal_data_email.tr(),
                     controller: _emailController,
                     keyboardType: TextInputType.emailAddress,
                     validator: _controller.emailValidator,
@@ -77,7 +77,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 12),
 
                   MizanTextField(
-                    label: LocaleKeys.register_monthly_salary.tr(),
+                    label: LocaleKeys.personal_data_monthly_salary.tr(),
                     controller: _salaryController,
                     keyboardType: TextInputType.number,
                     obscureText: true,
@@ -87,7 +87,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 12),
 
                   MizanTextField(
-                    label: LocaleKeys.register_bank_balance.tr(),
+                    label: LocaleKeys.personal_data_bank_balance.tr(),
                     controller: _balanceController,
                     keyboardType: TextInputType.number,
                     obscureText: true,
@@ -97,10 +97,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 12),
 
                   MizanPickerFormField(
-                    label: LocaleKeys.register_choose_country.tr(),
+                    label: LocaleKeys.personal_data_choose_country.tr(),
                     value: selectedCountry,
                     validator: (value) => value == null || value.isEmpty
-                        ? LocaleKeys.register_required_field.tr()
+                        ? LocaleKeys.personal_data_required_field.tr()
                         : null,
                     onChanged: (country) {
                       setState(() => selectedCountry = country);
@@ -110,7 +110,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 20),
 
                   MizanButton(
-                    text: LocaleKeys.register.tr(),
+                    text: LocaleKeys.personal_data_button_text.tr(),
                     onPressed: () async {
                       if (!_formKey.currentState!.validate()) return;
 
@@ -140,7 +140,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       messenger.showSnackBar(
                         SnackBar(
                           content: Text(
-                            LocaleKeys.register_data_saved_successfully.tr(),
+                            LocaleKeys.personal_data_data_saved_successfully
+                                .tr(),
                           ),
                         ),
                       );

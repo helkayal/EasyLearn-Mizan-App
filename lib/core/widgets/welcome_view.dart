@@ -40,7 +40,7 @@ class WelcomeView extends StatelessWidget {
             ),
             child: Text(
               greetingMessage,
-              style: Theme.of(context).textTheme.headlineLarge,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ),
         ),
