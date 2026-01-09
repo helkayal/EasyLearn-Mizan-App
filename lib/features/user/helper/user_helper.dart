@@ -35,6 +35,15 @@ class UserHelper {
     return null;
   }
 
+  UserDm? loadUser() {
+    final box = Hive.box(HiveConstants.userBox);
+    final data = box.get(HiveConstants.user);
+
+    if (data == null) return null;
+
+    return UserDm.fromMap(Map<String, dynamic>.from(data));
+  }
+
   Future<void> saveUser({
     required String name,
     required String email,
@@ -53,5 +62,10 @@ class UserHelper {
     final box = Hive.box(HiveConstants.userBox);
     await box.put(HiveConstants.user, user.toMap());
     await box.put(HiveConstants.isLoggedin, true);
+  }
+
+  Future<void> logout() async {
+    final box = Hive.box(HiveConstants.userBox);
+    await box.clear();
   }
 }

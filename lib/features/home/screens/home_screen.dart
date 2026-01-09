@@ -5,6 +5,7 @@ import 'package:mizan_app/core/utils/hive_constants.dart';
 import 'package:mizan_app/features/currency/screens/currency_screen.dart';
 import 'package:mizan_app/core/widgets/welcome_view.dart';
 import 'package:mizan_app/features/home/widgets/home_action_card.dart';
+import 'package:mizan_app/features/user/screens/personal_screen.dart';
 import 'package:mizan_app/generated/locale_keys.g.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -62,7 +63,12 @@ class HomeScreen extends StatelessWidget {
             HomeActionCard(
               title: LocaleKeys.home_personal_data.tr(),
               icon: Image.asset("assets/images/icPersonal.png"),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const PersonalScreen()),
+                );
+              },
             ),
           ],
         ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:mizan_app/core/utils/hive_constants.dart';
 import 'package:mizan_app/features/home/screens/home_screen.dart';
-import 'package:mizan_app/features/register/screens/register_screen.dart';
+import 'package:mizan_app/features/user/screens/register_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

@@ -15,6 +15,7 @@ class AppTheme {
       titleTextStyle: AppTextStyles.black28Bold,
       elevation: 0,
       centerTitle: true,
+      iconTheme: IconThemeData(color: AppColors.greenColor),
     ),
 
     textTheme: const TextTheme(
@@ -25,6 +26,14 @@ class AppTheme {
       bodyMedium: AppTextStyles.grey18Regular,
 
       labelMedium: AppTextStyles.lightYellow20SemiBold,
+    ),
+
+    colorScheme: const ColorScheme.light(
+      primary: AppColors.greenColor,
+      onPrimary: AppColors.lightGreenColor,
+      secondary: AppColors.lightYellowColor,
+      onSecondary: AppColors.blackColor,
+      surface: AppColors.greyColor,
     ),
 
     inputDecorationTheme: InputDecorationTheme(
@@ -60,7 +69,13 @@ class AppTheme {
         minimumSize: const Size(double.infinity, 52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
         textStyle: AppTextStyles.black20Bold,
+        elevation: 0,
       ),
+    ),
+
+    snackBarTheme: const SnackBarThemeData(
+      backgroundColor: AppColors.greenColor,
+      contentTextStyle: AppTextStyles.lightYellow20SemiBold,
     ),
   );
 }

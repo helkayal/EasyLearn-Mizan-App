@@ -13,7 +13,7 @@ void main() async {
   // Open Hive boxes
   await Hive.openBox(HiveConstants.userBox);
   // await Hive.openBox(HiveConstants.settingsBox);
-  // await Hive.openBox(HiveConstants.cacheBox);
+  // await Hive.openBox(HiveConstants.installmentsBox);
 
   await EasyLocalization.ensureInitialized();
 
@@ -23,6 +23,7 @@ void main() async {
       path: 'assets/translations',
       fallbackLocale: Locale('ar'),
       startLocale: Locale('ar'),
+      saveLocale: true,
       child: MizanApp(),
     ),
   );

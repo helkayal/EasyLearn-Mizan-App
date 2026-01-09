@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:mizan_app/core/data/countries.dart';
+import 'package:mizan_app/core/helpers/countries_helper.dart';
 
 void _showCountryPicker(
   BuildContext context,
@@ -21,6 +22,7 @@ void _showCountryPicker(
           itemCount: countries.length,
           itemBuilder: (ctx, i) {
             final country = countries[i];
+            final countryId = country['country_id'] ?? '';
             final name = lang == 'ar'
                 ? country['country_ar'] ?? ''
                 : country['country_en'] ?? '';
@@ -30,7 +32,8 @@ void _showCountryPicker(
               title: Text(name),
               onTap: () {
                 Navigator.pop(context);
-                onSelected(name);
+                // return the country id so callers can persist it
+                onSelected(countryId);
               },
             );
           },
@@ -63,6 +66,7 @@ class MizanPickerFormField extends FormField<String> {
            return InkWell(
              onTap: () {
                _showCountryPicker(field.context, (selected) {
+                 // `selected` is country_id; update form field value with id
                  field.didChange(selected);
                  if (onChanged != null) onChanged(selected);
                });
@@ -70,9 +74,27 @@ class MizanPickerFormField extends FormField<String> {
              child: InputDecorator(
                decoration: decoration,
                isEmpty: field.value == null || field.value!.isEmpty,
-               child: Text(
-                 field.value ?? '',
-                 style: theme.textTheme.bodyMedium,
+               child: Row(
+                 children: [
+                   // show flag then name when a country id is selected
+                   Text(
+                     CountriesHelper().flagForId(field.context, field.value) ??
+                         '',
+                     style: const TextStyle(fontSize: 20),
+                   ),
+                   const SizedBox(width: 8),
+                   Expanded(
+                     child: Text(
+                       CountriesHelper().displayNameForId(
+                             field.context,
+                             field.value,
+                           ) ??
+                           '',
+                       style: theme.textTheme.bodyMedium,
+                       overflow: TextOverflow.ellipsis,
+                     ),
+                   ),
+                 ],
                ),
              ),
            );

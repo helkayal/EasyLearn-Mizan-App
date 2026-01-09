@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 import 'package:mizan_app/core/widgets/mizan_button.dart';
 import 'package:mizan_app/core/widgets/mizan_text_field.dart';
-import 'package:mizan_app/features/register/widgets/mizan_picker_field.dart';
-import 'package:mizan_app/features/user/helper/user_controller.dart';
-import 'package:mizan_app/features/user/register/model/user_dm.dart';
+import 'package:mizan_app/features/user/widgets/mizan_picker_field.dart';
+import 'package:mizan_app/features/user/helper/user_helper.dart';
+import 'package:mizan_app/features/user/model/user_dm.dart';
 import 'package:mizan_app/generated/locale_keys.g.dart';
 
 class UserForm extends StatefulWidget {
@@ -65,16 +65,6 @@ class _UserFormState extends State<UserForm> {
 
     if (!mounted) return;
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-          widget.initialUser == null
-              ? LocaleKeys.personal_data_data_saved_successfully.tr()
-              : LocaleKeys.personal_data_updated_successfully.tr(),
-        ),
-      ),
-    );
-
     widget.onSaved?.call();
   }
 
@@ -84,13 +74,13 @@ class _UserFormState extends State<UserForm> {
       key: _formKey,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       child: Column(
+        spacing: 20,
         children: [
           MizanTextField(
             label: LocaleKeys.personal_data_name.tr(),
             controller: _nameController,
             validator: _userHelper.requiredValidator,
           ),
-          const SizedBox(height: 12),
 
           MizanTextField(
             label: LocaleKeys.personal_data_email.tr(),
@@ -98,23 +88,22 @@ class _UserFormState extends State<UserForm> {
             keyboardType: TextInputType.emailAddress,
             validator: _userHelper.emailValidator,
           ),
-          const SizedBox(height: 12),
 
           MizanTextField(
             label: LocaleKeys.personal_data_monthly_salary.tr(),
             controller: _salaryController,
             keyboardType: TextInputType.number,
+            obscureText: true,
             validator: _userHelper.numericValidator,
           ),
-          const SizedBox(height: 12),
 
           MizanTextField(
             label: LocaleKeys.personal_data_bank_balance.tr(),
             controller: _balanceController,
             keyboardType: TextInputType.number,
+            obscureText: true,
             validator: _userHelper.numericValidator,
           ),
-          const SizedBox(height: 12),
 
           MizanPickerFormField(
             label: LocaleKeys.personal_data_choose_country.tr(),
@@ -126,7 +115,7 @@ class _UserFormState extends State<UserForm> {
               setState(() => selectedCountry = country);
             },
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 10),
 
           MizanButton(
             text: widget.initialUser == null

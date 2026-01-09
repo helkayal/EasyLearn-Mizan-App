@@ -10,6 +10,7 @@ class MizanApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      key: ValueKey('${context.locale.languageCode}_app'),
       debugShowCheckedModeBanner: false,
       title: LocaleKeys.app_name.tr(),
       localizationsDelegates: context.localizationDelegates,

@@ -1,5 +1,6 @@
 final List<Map<String, String>> countries = [
   {
+    'country_id': 'EG',
     'country_ar': 'مصر',
     'country_en': 'Egypt',
     'currency_ar': 'جنيه مصري',
@@ -7,6 +8,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇪🇬',
   },
   {
+    'country_id': 'SA',
     'country_ar': 'السعودية',
     'country_en': 'Saudi Arabia',
     'currency_ar': 'ريال سعودي',
@@ -14,6 +16,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇸🇦',
   },
   {
+    'country_id': 'AE',
     'country_ar': 'الامارات',
     'country_en': 'UAE',
     'currency_ar': 'درهم إماراتي',
@@ -21,6 +24,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇦🇪',
   },
   {
+    'country_id': 'BH',
     'country_ar': 'البحرين',
     'country_en': 'Bahrain',
     'currency_ar': 'دينار بحريني',
@@ -28,6 +32,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇧🇭',
   },
   {
+    'country_id': 'KW',
     'country_ar': 'الكويت',
     'country_en': 'Kuwait',
     'currency_ar': 'دينار كويتي',
@@ -35,6 +40,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇰🇼',
   },
   {
+    'country_id': 'QA',
     'country_ar': 'قطر',
     'country_en': 'Qatar',
     'currency_ar': 'ريال قطري',
@@ -42,6 +48,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇶🇦',
   },
   {
+    'country_id': 'TN',
     'country_ar': 'تونس',
     'country_en': 'Tunisia',
     'currency_ar': 'دينار تونسي',
@@ -49,6 +56,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇹🇳',
   },
   {
+    'country_id': 'SY',
     'country_ar': 'سوريا',
     'country_en': 'Syria',
     'currency_ar': 'ليرة سورية',
@@ -56,6 +64,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇸🇾',
   },
   {
+    'country_id': 'DZ',
     'country_ar': 'الجزائر',
     'country_en': 'Algeria',
     'currency_ar': 'دينار جزائري',
@@ -63,6 +72,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇩🇿',
   },
   {
+    'country_id': 'PS',
     'country_ar': 'فلسطين',
     'country_en': 'Palestine',
     'currency_ar': 'شيكل إسرائيلي',
@@ -70,6 +80,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇵🇸',
   },
   {
+    'country_id': 'OM',
     'country_ar': 'عُمان',
     'country_en': 'Oman',
     'currency_ar': 'ريال عُماني',
@@ -77,6 +88,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇴🇲',
   },
   {
+    'country_id': 'SD',
     'country_ar': 'السودان',
     'country_en': 'Sudan',
     'currency_ar': 'جنيه سوداني',
@@ -84,6 +96,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇸🇩',
   },
   {
+    'country_id': 'LB',
     'country_ar': 'لبنان',
     'country_en': 'Lebanon',
     'currency_ar': 'ليرة لبنانية',
@@ -91,6 +104,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇱🇧',
   },
   {
+    'country_id': 'LY',
     'country_ar': 'ليبيا',
     'country_en': 'Libya',
     'currency_ar': 'دينار ليبي',
@@ -98,6 +112,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇱🇾',
   },
   {
+    'country_id': 'MR',
     'country_ar': 'موريتانيا',
     'country_en': 'Mauritania',
     'currency_ar': 'أوقية موريتانية',
@@ -105,6 +120,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇲🇷',
   },
   {
+    'country_id': 'IQ',
     'country_ar': 'العراق',
     'country_en': 'Iraq',
     'currency_ar': 'دينار عراقي',
@@ -112,6 +128,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇮🇶',
   },
   {
+    'country_id': 'JO',
     'country_ar': 'الاردن',
     'country_en': 'Jordan',
     'currency_ar': 'دينار أردني',
@@ -119,6 +136,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇯🇴',
   },
   {
+    'country_id': 'SO',
     'country_ar': 'الصومال',
     'country_en': 'Somalia',
     'currency_ar': 'شلن صومالي',
@@ -126,6 +144,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇸🇴',
   },
   {
+    'country_id': 'DJ',
     'country_ar': 'جيبوتى',
     'country_en': 'Djibouti',
     'currency_ar': 'فرنك جيبوتي',
@@ -133,6 +152,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇩🇯',
   },
   {
+    'country_id': 'KM',
     'country_ar': 'جزر القمر',
     'country_en': 'Comoros',
     'currency_ar': 'فرنك قمري',
@@ -140,6 +160,7 @@ final List<Map<String, String>> countries = [
     'flag': '🇰🇲',
   },
   {
+    'country_id': 'MO',
     'country_ar': 'المغرب',
     'country_en': 'Morocco',
     'currency_ar': 'درهم مغربي',
