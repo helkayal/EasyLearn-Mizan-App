@@ -15,10 +15,6 @@ class EditProfileDialog extends StatelessWidget {
     final isRtl = context.locale.languageCode == 'ar';
 
     return Dialog(
-      elevation: 0,
-      backgroundColor: theme.colorScheme.secondary,
-      insetPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxHeight: 600),
         child: Column(

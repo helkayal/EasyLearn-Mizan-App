@@ -77,5 +77,12 @@ class AppTheme {
       backgroundColor: AppColors.greenColor,
       contentTextStyle: AppTextStyles.lightYellow20SemiBold,
     ),
+
+    dialogTheme: DialogThemeData(
+      backgroundColor: AppColors.lightYellowColor,
+      elevation: 0,
+      insetPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+    ),
   );
 }
