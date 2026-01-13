@@ -23,9 +23,10 @@ class AppTheme {
       headlineMedium: AppTextStyles.black20Bold,
       headlineSmall: AppTextStyles.black16SemiBold,
 
-      bodyMedium: AppTextStyles.grey18Regular,
+      bodyMedium: AppTextStyles.grey20Regular,
 
       labelMedium: AppTextStyles.lightYellow20SemiBold,
+      labelSmall: AppTextStyles.green20Bold,
     ),
 
     colorScheme: const ColorScheme.light(

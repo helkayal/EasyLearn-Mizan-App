@@ -22,8 +22,8 @@ class AppTextStyles {
     color: AppColors.blackColor,
   );
 
-  static const TextStyle grey18Regular = TextStyle(
-    fontSize: 18,
+  static const TextStyle grey20Regular = TextStyle(
+    fontSize: 20,
     fontWeight: FontWeight.w400,
     color: AppColors.greyColor,
   );
@@ -32,5 +32,11 @@ class AppTextStyles {
     color: AppColors.lightYellowColor,
     fontSize: 20,
     fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle green20Bold = TextStyle(
+    color: AppColors.greenColor,
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
   );
 }

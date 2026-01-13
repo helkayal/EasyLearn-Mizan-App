@@ -48,5 +48,23 @@ abstract class  LocaleKeys {
   static const installment_edit = 'installment.edit';
   static const installment_delete = 'installment.delete';
   static const installment = 'installment';
+  static const expenses_room_description = 'expenses.room_description';
+  static const expenses_salary_amount_label = 'expenses.salary_amount_label';
+  static const expenses_fixed_expenses_title = 'expenses.fixed_expenses_title';
+  static const expenses_variable_expenses_title = 'expenses.variable_expenses_title';
+  static const expenses_savings_title = 'expenses.savings_title';
+  static const expenses_category_electricity_water = 'expenses.category_electricity_water';
+  static const expenses_category_education = 'expenses.category_education';
+  static const expenses_category_healthcare = 'expenses.category_healthcare';
+  static const expenses_category_transportation = 'expenses.category_transportation';
+  static const expenses_category_communications = 'expenses.category_communications';
+  static const expenses_category_shopping = 'expenses.category_shopping';
+  static const expenses_category_entertainment = 'expenses.category_entertainment';
+  static const expenses_category_trips = 'expenses.category_trips';
+  static const expenses_category_gifts = 'expenses.category_gifts';
+  static const expenses_category_increase_savings = 'expenses.category_increase_savings';
+  static const expenses_category_debt_payment = 'expenses.category_debt_payment';
+  static const expenses_category_emergency = 'expenses.category_emergency';
+  static const expenses = 'expenses';
 
 }

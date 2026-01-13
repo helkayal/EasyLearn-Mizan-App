@@ -59,5 +59,28 @@
     "all": "All",
     "edit": "Edit",
     "delete": "Delete"
+  },
+
+  "expenses": {
+    "room_description": "This page shows the optimal budget distribution based on your salary",
+    "salary_amount_label": "Salary",
+    "fixed_expenses_title": "Fixed Essential Expenses",
+    "variable_expenses_title": "Variable Personal Expenses",
+    "savings_title": "Savings & Investments",
+
+    "category_electricity_water": "Electricity & Water Bills",
+    "category_education": "Education Expenses",
+    "category_healthcare": "Healthcare",
+    "category_transportation": "Transportation",
+    "category_communications": "Communications",
+
+    "category_shopping": "Shopping",
+    "category_entertainment": "Entertainment Activities",
+    "category_trips": "Trips",
+    "category_gifts": "Gifts",
+
+    "category_increase_savings": "Increase Savings",
+    "category_debt_payment": "Debt Repayment",
+    "category_emergency": "Emergency Cases"
   }
 }

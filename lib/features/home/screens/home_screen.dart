@@ -4,6 +4,7 @@ import 'package:hive/hive.dart';
 import 'package:mizan_app/core/utils/hive_constants.dart';
 import 'package:mizan_app/features/currency/screens/currency_screen.dart';
 import 'package:mizan_app/core/widgets/welcome_view.dart';
+import 'package:mizan_app/features/expenses/screens/expenses_screen.dart';
 import 'package:mizan_app/features/home/widgets/home_action_card.dart';
 import 'package:mizan_app/features/installment/screens/installment_screen.dart';
 import 'package:mizan_app/features/user/screens/personal_screen.dart';
@@ -61,7 +62,12 @@ class HomeScreen extends StatelessWidget {
             HomeActionCard(
               title: LocaleKeys.home_expenses_organizer.tr(),
               icon: Image.asset("assets/images/icExpenses.png"),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const ExpensesScreen()),
+                );
+              },
             ),
 
             const SizedBox(height: 16),

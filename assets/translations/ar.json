@@ -59,5 +59,28 @@
     "all": "الكل",
     "edit": "تعديل",
     "delete": "حذف"
+  },
+
+  "expenses": {
+    "room_description": "في هذه الصفحة يتم عرض أفضل نسبة لتنظيم المصروفات من خلال مرتبك",
+    "salary_amount_label": "المرتب",
+    "fixed_expenses_title": "مصروفاتك الأساسية الثابتة",
+    "variable_expenses_title": "المصروفات الشخصية المتغيرة",
+    "savings_title": "الادخارات والاستثمارات",
+
+    "category_electricity_water": "فواتير الكهرباء والمياه",
+    "category_education": "مصاريف التعليم",
+    "category_healthcare": "الرعاية الصحية",
+    "category_transportation": "النقل",
+    "category_communications": "الاتصالات",
+
+    "category_shopping": "التسوق",
+    "category_entertainment": "الأنشطة الترفيهية",
+    "category_trips": "الرحلات",
+    "category_gifts": "الهدايا",
+
+    "category_increase_savings": "زيادة المدخرات",
+    "category_debt_payment": "تعجيل سداد الديون",
+    "category_emergency": "حالات الطوارئ"
   }
 }
