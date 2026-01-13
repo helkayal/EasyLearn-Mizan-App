@@ -84,5 +84,28 @@ class AppTheme {
       insetPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     ),
+
+    popupMenuTheme: PopupMenuThemeData(
+      color: AppColors.lightYellowColor,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+    ),
+
+    datePickerTheme: DatePickerThemeData(
+      backgroundColor: AppColors.lightYellowColor,
+      headerBackgroundColor: AppColors.greenColor,
+      headerForegroundColor: AppColors.blackColor,
+      todayForegroundColor: WidgetStateProperty.all(AppColors.blackColor),
+      todayBackgroundColor: WidgetStateProperty.all(AppColors.lightGreenColor),
+      cancelButtonStyle: ButtonStyle(
+        foregroundColor: WidgetStateProperty.all(AppColors.greyColor),
+        backgroundColor: WidgetStateProperty.all(AppColors.lightGreenColor),
+        textStyle: WidgetStateProperty.all(AppTextStyles.black16SemiBold),
+      ),
+      confirmButtonStyle: ButtonStyle(
+        foregroundColor: WidgetStateProperty.all(AppColors.greyColor),
+        backgroundColor: WidgetStateProperty.all(AppColors.lightGreenColor),
+        textStyle: WidgetStateProperty.all(AppTextStyles.black16SemiBold),
+      ),
+    ),
   );
 }

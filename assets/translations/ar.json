@@ -41,5 +41,23 @@
     "convert": "تحويل",
     "usd": "دولار أمريكي",
     "result_format": "{amount} {code} = {result} {target}"
+  },
+
+  "installment": {
+    "room_description": "في هذه الغرفة يتم عرض او إضافة او حذف الأقساط الملتزم بها حالياً",
+    "no_installments1": "ليس لديك اي قسط بعد. ",
+    "no_installments2": "أضف قسطًا الآن!",
+    "add_monthly_installment": "إضافة القسط الشهري",
+    "edit_monthly_installment": "تعديل القسط الشهري",
+    "monthly_amount": "القسط الشهري",
+    "due_date": "الميعاد",
+    "notes": "ملاحظات",
+    "add": "إضافة",
+    "cancel": "إلغاء",
+    "paid": "مدفوع",
+    "unpaid": "غير مدفوع",
+    "all": "الكل",
+    "edit": "تعديل",
+    "delete": "حذف"
   }
 }

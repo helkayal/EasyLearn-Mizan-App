@@ -6,6 +6,8 @@ class MizanTextField extends StatefulWidget {
   final TextInputType keyboardType;
   final bool obscureText;
   final String? Function(String?)? validator;
+  final bool readOnly;
+  final VoidCallback? onTap;
 
   const MizanTextField({
     super.key,
@@ -14,6 +16,8 @@ class MizanTextField extends StatefulWidget {
     this.keyboardType = TextInputType.text,
     this.obscureText = false,
     this.validator,
+    this.readOnly = false,
+    this.onTap,
   });
 
   @override
@@ -36,6 +40,8 @@ class _MizanTextFieldState extends State<MizanTextField> {
       keyboardType: widget.keyboardType,
       obscureText: _isObscured,
       validator: widget.validator,
+      readOnly: widget.readOnly,
+      onTap: widget.onTap,
       decoration: InputDecoration(
         labelText: widget.label,
         suffixIcon: widget.obscureText

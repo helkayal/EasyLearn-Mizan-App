@@ -41,5 +41,23 @@
     "convert": "Convert",
     "usd": "USD",
     "result_format": "{amount} {code} = {result} {target}"
+  },
+
+  "installment": {
+    "room_description": "In this section, you can view, add, or delete your current installments",
+    "no_installments1": "You don’t have any installments yet.",
+    "no_installments2": "Add one now!",
+    "add_monthly_installment": "Add Monthly Installment",
+    "edit_monthly_installment": "Edit Monthly Installment",
+    "monthly_amount": "Monthly Installment",
+    "due_date": "Due Date",
+    "notes": "Notes",
+    "add": "Add",
+    "cancel": "Cancel",
+    "paid": "Paid",
+    "unpaid": "Unpaid",
+    "all": "All",
+    "edit": "Edit",
+    "delete": "Delete"
   }
 }

@@ -32,5 +32,21 @@ abstract class  LocaleKeys {
   static const currency_usd = 'currency.usd';
   static const currency_result_format = 'currency.result_format';
   static const currency = 'currency';
+  static const installment_room_description = 'installment.room_description';
+  static const installment_no_installments1 = 'installment.no_installments1';
+  static const installment_no_installments2 = 'installment.no_installments2';
+  static const installment_add_monthly_installment = 'installment.add_monthly_installment';
+  static const installment_edit_monthly_installment = 'installment.edit_monthly_installment';
+  static const installment_monthly_amount = 'installment.monthly_amount';
+  static const installment_due_date = 'installment.due_date';
+  static const installment_notes = 'installment.notes';
+  static const installment_add = 'installment.add';
+  static const installment_cancel = 'installment.cancel';
+  static const installment_paid = 'installment.paid';
+  static const installment_unpaid = 'installment.unpaid';
+  static const installment_all = 'installment.all';
+  static const installment_edit = 'installment.edit';
+  static const installment_delete = 'installment.delete';
+  static const installment = 'installment';
 
 }
