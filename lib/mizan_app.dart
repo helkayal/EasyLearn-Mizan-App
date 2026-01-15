@@ -12,7 +12,6 @@ class MizanApp extends StatelessWidget {
     return MaterialApp(
       key: ValueKey('${context.locale.languageCode}_app'),
       debugShowCheckedModeBanner: false,
-      // title: LocaleKeys.app_name.tr(),
       onGenerateTitle: (context) => LocaleKeys.app_name.tr(),
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,

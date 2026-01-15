@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:mizan_app/core/utils/hive_constants.dart';
 import 'package:mizan_app/core/widgets/welcome_view.dart';
-import 'package:mizan_app/features/expenses/model/expenses_dm.dart';
-import 'package:mizan_app/features/expenses/widgets/expense_card.dart';
+import 'package:mizan_app/features/expenses/views/expenses_view.dart';
+import 'package:mizan_app/features/expenses/views/salary_view.dart';
 import 'package:mizan_app/generated/locale_keys.g.dart';
 
 class ExpensesScreen extends StatefulWidget {
@@ -46,37 +46,9 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
               greetingMessage: LocaleKeys.expenses_room_description.tr(),
             ),
 
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(vertical: 16),
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Text(
-                salary.toStringAsFixed(1),
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.labelMedium,
-              ),
-            ),
+            SalaryView(salary: salary),
 
-            SizedBox(
-              height: 500,
-              child: ListView.separated(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemCount: expensesList.length,
-                itemBuilder: (context, index) {
-                  return ExpenseCard(
-                    expense: expensesList[index],
-                    salary: salary,
-                  );
-                },
-                separatorBuilder: (BuildContext context, int index) {
-                  return const SizedBox(width: 20);
-                },
-              ),
-            ),
+            ExpensesView(salary: salary),
           ],
         ),
       ),

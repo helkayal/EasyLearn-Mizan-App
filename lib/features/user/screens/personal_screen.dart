@@ -26,19 +26,6 @@ class _PersonalScreenState extends State<PersonalScreen> {
     user ??= UserDm(name: "", email: "", salary: 0, balance: 0, country: "");
   }
 
-  // void _editProfile() async {
-  //   final updated = await Navigator.push(
-  //     context,
-  //     MaterialPageRoute(builder: (_) => EditPersonalScreen(user: user!)),
-  //   );
-
-  //   if (updated == true) {
-  //     setState(() {
-  //       user = _userHelper.loadUser();
-  //     });
-  //   }
-  // }
-
   void _editProfile() async {
     final updated = await showDialog<bool>(
       context: context,
@@ -81,8 +68,6 @@ class _PersonalScreenState extends State<PersonalScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // final theme = Theme.of(context);
-
     return Scaffold(
       appBar: AppBar(
         title: Text(LocaleKeys.app_name.tr()),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mizan_app/features/expenses/model/expenses_category_dm.dart';
 
 class ExpensesDM {
   final String titleKey;
@@ -11,6 +10,13 @@ class ExpensesDM {
     required this.percentage,
     required this.categories,
   });
+}
+
+class ExpenseCategoryDM {
+  final String key; // localization key
+  final IconData icon;
+
+  const ExpenseCategoryDM({required this.key, required this.icon});
 }
 
 final List<ExpensesDM> expensesList = [

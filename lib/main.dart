@@ -13,7 +13,6 @@ void main() async {
   // Open Hive boxes
   await Hive.openBox(HiveConstants.userBox);
   await Hive.openBox(HiveConstants.installmentsBox);
-  // await Hive.openBox(HiveConstants.settingsBox);
 
   await EasyLocalization.ensureInitialized();
 

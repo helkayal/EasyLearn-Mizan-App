@@ -66,7 +66,6 @@ class MizanPickerFormField extends FormField<String> {
            return InkWell(
              onTap: () {
                _showCountryPicker(field.context, (selected) {
-                 // `selected` is country_id; update form field value with id
                  field.didChange(selected);
                  if (onChanged != null) onChanged(selected);
                });
@@ -76,7 +75,6 @@ class MizanPickerFormField extends FormField<String> {
                isEmpty: field.value == null || field.value!.isEmpty,
                child: Row(
                  children: [
-                   // show flag then name when a country id is selected
                    Text(
                      CountriesHelper().flagForId(field.context, field.value) ??
                          '',

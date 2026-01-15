@@ -22,7 +22,7 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
 
   String selectedCountry = '';
   String? selectedCode;
-  String? currencyCode; // Store English currency code for exchange rates
+  String? currencyCode;
   String result = '0.00';
   bool showResultCard = false;
 
